@@ -1,2 +1,6 @@
 # otoHaber
-PHP - MySQL ile yazmış olduğum haber portal sitesi
+
+
+PHP ve MySQL veritabanını kullanarak yazmış olduğum haber portal sitesi
+
+
