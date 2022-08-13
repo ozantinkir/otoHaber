@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="Public/img/favicon.png">
     <title>OtoHaber - Güncel otomotiv haberleri</title>
-    <<!-- Favicon -->
+    <!-- Favicon -->
     <link href="Public/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
@@ -42,24 +42,14 @@
    <div class="container-fluid">
         <div class="row align-items-center bg-light px-lg-5">
             <div class="col-12 col-md-8">
-                <div class="d-flex justify-content-between">
-                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Tranding</div>
-                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3" style="width: calc(100% - 100px); padding-left: 90px;">
-                        <div class="text-truncate"><a class="text-secondary" href=""><?php echo $result[0]['section1'];?>
                 
-                </a></div>
-                        <div class="text-truncate"><a class="text-secondary" href=""><?php echo $result[0]['section2'];?></a></div>
-                    </div>
-                </div>
             </div>
-            <div class="col-md-4 text-right d-none d-md-block">
-            Tarih
-            </div>
+            
         </div>
         <div class="row align-items-center py-2 px-lg-5">
             <div class="col-lg-4">
                 <a href="" class="navbar-brand d-none d-lg-block">
-                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">News</span>Room</h1>
+                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">Oto</span>Haber</h1>
                 </a>
             </div>
             <div class="col-lg-8 text-center text-lg-right">
@@ -81,17 +71,11 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="Home.php" class="nav-item nav-link active">Anasayfa</a>
-                    <a href="Comments.php" class="nav-item nav-link">Son Dakika</a>
-                    <a href="Contact.php" class="nav-item nav-link">Hakkımızda</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Kategori</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="#" class="dropdown-item">Elektrikli Araçlar</a>
-                            <a href="#" class="dropdown-item">Hybrid Araçlar</a>
-                        </div>
-                    </div>
-                    <a href="Contact.php" class="nav-item nav-link">İletişim</a>
+                    <a href="Home" class="nav-item nav-link active">Anasayfa</a>
+                    <a href="Haberler" class="nav-item nav-link">Haberler</a>
+                    <a href="Kampanyalar" class="nav-item nav-link">Kampanyalar</a>
+                    <a href="TestMerkezi" class="nav-item nav-link">Test Merkezi</a>
+                    <a href="iletisim.php" class="nav-item nav-link">İletişim</a>
                 </div>
                 <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
                     <input type="text" class="form-control" placeholder="Keyword">

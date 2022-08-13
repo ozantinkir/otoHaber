@@ -29,9 +29,9 @@ class Comments extends \Core\Model
      * If this page is called by the controller without method parameter, this will work first
      */
     public function show() {
-        $result = ($this->pdo)->select('comments')
-                              ->where('active', '1', '=')
-                              ->orderBy('datetime', 'desc')
+        $result = ($this->pdo)->select('yorumlar')
+                              ->where('aktif', '1', '=')
+                              ->orderBy('tarih', 'desc')
                               ->run(); // select all records from the table
         return $result; // return the result
     }
@@ -41,16 +41,16 @@ class Comments extends \Core\Model
      * If this page is called by the controller with 'send' parameter, this method will work
      */
     public function send($params = null) {
-        $name = $GLOBALS['sunApp']->secureVar($params['name'], 'string'); // get posted parameter
-        $comment = $GLOBALS['sunApp']->secureVar($params['comment'], 'string'); // get posted parameter
+        $name = $GLOBALS['sunApp']->secureVar($params['adsoyad'], 'string'); // get posted parameter
+        $comment = $GLOBALS['sunApp']->secureVar($params['yorumlar'], 'string'); // get posted parameter
         if (!empty($name) && !empty($comment)) { // if posted values not empty
             $data = [
-                'name'      => $name,
-                'comment'   => $comment,
-                'datetime'  => date("Y-m-d H:i:s"),
-                'active'    => 1
+                'adsoyad'      => $name,
+                'yorum'   => $comment,
+                'tarih'  => date("Y-m-d H:i:s"),
+                'aktif'    => 1
             ]; // values array for insert to the table
-            $insert = ($this->pdo)->insert('comments', $data)
+            $insert = ($this->pdo)->insert('yorumlar', $data)
                                   ->run(); // insert the values to the table
             if ($insert === true && ($this->pdo)->rowCount() > 0) { // if record inserted (successful)
                 return true;

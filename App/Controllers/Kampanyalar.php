@@ -20,9 +20,9 @@ namespace App\Controllers;
  * Change class name (use page's name always)
  * Don't change parent controller path and name
  */
-class About extends \Core\Controller
+class Services extends \Core\Controller
 {
-    
+
     /**
      * Construct method of the inherited controller
      * Don't change the parameters if not needed
@@ -43,10 +43,31 @@ class About extends \Core\Controller
      * If this page is called by a browser without method parameter, this will work first
      */
     public function show() {
+        $action = "show"; // define variable for use in view pag
         if (!empty($this->model)) { // if this page needs database
             $result = ($this->model)->show(); // call model class' show method
         }
         require_once ($this->view); // include view file (with $result content)
+    }
+
+    /**
+     * Optional method for this controller
+     * If this page is called by a browser with 'detail' parameter, this method will work
+     */
+    public function detail() {
+        $action = "detail"; // define variable for use in view page
+        if (count($this->params) > 0) { // if parameters exist
+            if (!empty($this->model)) { // if this page needs database
+                $result = ($this->model)->detail($this->params); // call model class' send method with params
+            }
+            if (is_bool($result) || $result === false) { // if model does not send the result
+                header('Location: '.SYS_BASEURL.'/services'); // redirect to the list page
+            } else { // if model sends the result
+                require_once ($this->view); // include view file (with $result content)
+            }
+        } else { // if parameters does not exist
+            header('Location: '.SYS_BASEURL.'/services'); // redirect to the list page
+        }
     }
 
     /**

@@ -28,7 +28,7 @@ class Home extends \Core\Model
      * If this page is called by the controller without method parameter, this will work first
      */
     public function show() {
-        $result = ($this->pdo)->select('home')
+        $result = ($this->pdo)->select('haberler')
                               ->run(); // select all records from the table
         return $result; // return the result
     }

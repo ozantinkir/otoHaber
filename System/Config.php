@@ -14,9 +14,9 @@
  */
 define ('DB_HOST', 'localhost'); // database host
 define ('DB_PORT', '3306'); // database port
-define ('DB_DBNAME', 'sunmvc'); // database name
-define ('DB_USERNAME', 'sunmvc_user'); // database username
-define ('DB_PASSWORD', 'sunhill.4927'); // database password
+define ('DB_DBNAME', 'otohaber'); // database name
+define ('DB_USERNAME', 'oto_haber'); // database username
+define ('DB_PASSWORD', 'otohaber_3455'); // database password
 
 /**
  * Cache Settings
@@ -34,7 +34,7 @@ $cacheConfig = [
  * System Settings
  */
 define ('SYS_PHPERR', true); // php errors (show or hide, true / false)
-define ('SYS_SYSERR', false); // system errors (shor or hide, true / false)
+define ('SYS_SYSERR', true); // system errors (shor or hide, true / false)
 define ('SYS_PGCACHE', false); // page caching (true / false)
 define ('SYS_CHEXCLUDE', ['comments']); // excluded pages for page caching (array)
 define ('SYS_HOMEPAGE', 'home'); // home page (index, home, main, etc.)

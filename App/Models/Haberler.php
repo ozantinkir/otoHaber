@@ -29,7 +29,7 @@ class Services extends \Core\Model
      * If this page is called by the controller without method parameter, this will work first
      */
     public function show() {
-        $result = ($this->pdo)->select('services')
+        $result = ($this->pdo)->select('haberler')
                               ->orderBy('id', 'asc')
                               ->run(); // select all records from the table
         return $result; // return the result
@@ -42,12 +42,12 @@ class Services extends \Core\Model
     public function detail($params = null) {
         $id = $GLOBALS['sunApp']->secureVar($params[2], 'integer'); // get parameter
         if (intval($id) > 0) { // if parameter exists
-            $select = ($this->pdo)->select('services')
+            $select = ($this->pdo)->select('haberler')
                                   ->where('id', $id, '=')
                                   ->limit(1)
                                   ->run(); // select one record from the table
             if (($this->pdo)->rowCount() > 0) { // if record exists (affected row count greater than zero)
-                $update = ($this->pdo)->update('services', ['view' => $select[0]['view']+1])
+                $update = ($this->pdo)->update('haberler', ['view' => $select[0]['view']+1])
                                       ->where('id', $id, '=')
                                       ->run(); // update this record in the table
                 return $select; // return the select query result
