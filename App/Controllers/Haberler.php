@@ -20,7 +20,7 @@ namespace App\Controllers;
  * Change class name (use page's name always)
  * Don't change parent controller path and name
  */
-class Services extends \Core\Controller
+class Haberler extends \Core\Controller
 {
 
     /**

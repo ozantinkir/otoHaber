@@ -20,7 +20,7 @@ namespace App\Controllers;
  * Change class name (use page's name always)
  * Don't change parent controller path and name
  */
-class Services extends \Core\Controller
+class Kampanyalar extends \Core\Controller
 {
 
     /**
@@ -61,12 +61,12 @@ class Services extends \Core\Controller
                 $result = ($this->model)->detail($this->params); // call model class' send method with params
             }
             if (is_bool($result) || $result === false) { // if model does not send the result
-                header('Location: '.SYS_BASEURL.'/services'); // redirect to the list page
+                header('Location: '.SYS_BASEURL.'/kampanyalar'); // redirect to the list page
             } else { // if model sends the result
                 require_once ($this->view); // include view file (with $result content)
             }
         } else { // if parameters does not exist
-            header('Location: '.SYS_BASEURL.'/services'); // redirect to the list page
+            header('Location: '.SYS_BASEURL.'/kampanyalar'); // redirect to the list page
         }
     }
 

@@ -19,7 +19,7 @@ namespace App\Controllers;
  * Inherit from the main controller
  * Don't change parent controller path and name
  */
-class Home extends \Core\Controller
+class Anasayfa extends \Core\Controller
 {
 
     /**

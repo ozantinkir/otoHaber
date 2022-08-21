@@ -19,7 +19,7 @@ namespace App\Models;
  * Inherit from the main model
  * Don't change parent model path and name
  */
-class Home extends \Core\Model
+class Anasayfa extends \Core\Model
 {
 
     /**

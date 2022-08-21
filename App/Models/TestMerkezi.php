@@ -20,7 +20,7 @@ namespace App\Models;
  * Change class name (use page's name always)
  * Don't change parent model path and name
  */
-class Services extends \Core\Model
+class TestMerkezi extends \Core\Model
 {
 
     /**

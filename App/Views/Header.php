@@ -71,11 +71,12 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="Home" class="nav-item nav-link active">Anasayfa</a>
+                    <a href="Anasayfa" class="nav-item nav-link active">Anasayfa</a>
                     <a href="Haberler" class="nav-item nav-link">Haberler</a>
                     <a href="Kampanyalar" class="nav-item nav-link">Kampanyalar</a>
                     <a href="TestMerkezi" class="nav-item nav-link">Test Merkezi</a>
                     <a href="iletisim.php" class="nav-item nav-link">İletişim</a>
+                    <a href="giris.php" class="nav-item nav-link">Giriş Yap</a>
                 </div>
                 <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
                     <input type="text" class="form-control" placeholder="Keyword">

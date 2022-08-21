@@ -20,7 +20,7 @@ namespace App\Models;
  * Change class name (use page's name always)
  * Don't change parent model path and name
  */
-class Contact extends \Core\Model
+class iletisim extends \Core\Model
 {
 
     /**
